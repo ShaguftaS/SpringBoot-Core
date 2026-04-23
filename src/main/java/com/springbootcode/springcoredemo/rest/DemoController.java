@@ -29,5 +29,11 @@ public class DemoController {
         return myCoach.getDailyWorkout();
     }
 
+    @GetMapping("/check")
+    public String check(){
+
+        return "Comparing beans: myCoach==anotherCoach, " + (myCoach == anotherCoach);
+    }
+
 
 }
