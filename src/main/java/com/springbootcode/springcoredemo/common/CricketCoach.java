@@ -2,6 +2,7 @@ package com.springbootcode.springcoredemo.common;
 
 
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -18,7 +19,7 @@ public class CricketCoach implements Coach{
     }
 
     //define our destroy method
-    @PostConstruct
+    @PreDestroy
     public void doMyCleanUpStuff(){
         System.out.println("In doMyCleanUpStuff();  " + getClass().getSimpleName());
     }
